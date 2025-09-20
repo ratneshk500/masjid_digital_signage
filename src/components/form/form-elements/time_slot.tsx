@@ -195,9 +195,9 @@ function getTimeLeft(targetTime: string) {
   const target = new Date();
   
   // targetTime in "HH:MM:SS" 24-hour format
-  const [hours, minutes, seconds] = targetTime.split(":").map(Number);
+  const [hours, minutes1, seconds] = targetTime.split(":").map(Number);
 
-  target.setHours(hours, minutes, seconds, 0);
+  target.setHours(hours, minutes1, seconds, 0);
 
   // If target already passed today, move it to tomorrow
   if (target < now) {
@@ -328,7 +328,7 @@ if(diffrence > 0)
 //alert(times11);
 
 
-
+/*
     function time_fiddfrnce(current_time, end_time) 
     {
   const startMinutes = parseAMPM(current_time);
@@ -336,7 +336,8 @@ if(diffrence > 0)
     let delta1 = endMinutes - startMinutes;
 	return delta1;
 }
-
+*/
+/*	  
 function parseAMPM(timeStr: string): number {
   const [time, modifier] = timeStr.split(" ");
   let [hours, minutes] = time.split(":").map(Number);
@@ -346,7 +347,7 @@ function parseAMPM(timeStr: string): number {
 
   return hours * 60 + minutes;
 }
-
+*/
 
 
 
