@@ -132,7 +132,7 @@ function convertToAMPM(time24: string) {
 
 function parseAMPM(timeStr: string): number {
   const [time, modifier] = timeStr.split(" ");
-  let [hours, minutes] = time.split(":").map(Number);
+  const [hours, minutes] = time.split(":").map(Number);
 
   if (modifier === "PM" && hours !== 12) hours += 12;
   if (modifier === "AM" && hours === 12) hours = 0;
@@ -194,7 +194,7 @@ const prayertime=[];
 
 
   
-
+/*
 function getTimeLeft(targetTime: string) {
   const now = new Date();
   const target = new Date();
@@ -218,7 +218,7 @@ function getTimeLeft(targetTime: string) {
   return { h, m, s };
 }
 
-
+*/
 
 
 
@@ -338,8 +338,8 @@ if(diffrence > 0)
     {
   const startMinutes = parseAMPM(current_time);
     const endMinutes = parseAMPM(end_time);
-    const delta1 = endMinutes - startMinutes;
-	return delta1;
+    return endMinutes - startMinutes;
+	
 }
 
 
