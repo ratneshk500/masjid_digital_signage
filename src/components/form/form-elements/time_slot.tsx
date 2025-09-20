@@ -132,12 +132,12 @@ function convertToAMPM(time24: string) {
 
 function parseAMPM(timeStr: string): number {
   const [time, modifier] = timeStr.split(" ");
-  const [hours, minutes] = time.split(":").map(Number);
+  const [hours, minutes11] = time.split(":").map(Number);
 
   if (modifier === "PM" && hours !== 12) hours += 12;
   if (modifier === "AM" && hours === 12) hours = 0;
 
-  return hours * 60 + minutes;
+  return hours * 60 + minutes11;
 }
 
 {/* end time diffrence function */}
