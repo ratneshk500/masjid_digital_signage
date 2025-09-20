@@ -7,7 +7,7 @@ export default function Gallery() {
   
    
   
-  const [media, setMedia] = useState<any[]>([]);
+  const [media, setMedia] = useState([]);
 
   useEffect(() => {
     axios.get("/api/upload").then((res) => setMedia(res.data));
