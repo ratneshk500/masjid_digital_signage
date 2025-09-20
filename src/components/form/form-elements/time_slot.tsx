@@ -154,30 +154,8 @@ function parseAMPM(timeStr: string): number {
 		
 //});
 
- {/* set time left */}
-  
-  function getNextTime(times) {
-
-   
-  const now = new Date();
-
-  // Convert HH:mm to Date object for today
-  const dateTimes = times.map((t) => {
-	 
-    const [h, m] = t.split(":").map(Number);
-    const d = new Date();
-    d.setHours(h, m, 0, 0);
+ 
 	
-    return d;
-  });0
-
-  // Find first time greater than now
-  const nextTime = dateTimes.find((d) => d > now);
-// alert(nextTime);
-  return nextTime || null; // returns null if no future time today
-}
-
-
 
 
   
