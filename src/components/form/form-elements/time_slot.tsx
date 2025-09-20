@@ -90,6 +90,10 @@ const [time, setTime] = useState("");
 
 
 
+//console.log(prayertime);
+
+
+
 //alert(return_datetime);
 //alert(return_datetime);
 // Find the first time greater than the current time
@@ -128,12 +132,12 @@ function convertToAMPM(time24: string) {
 
 function parseAMPM(timeStr: string): number {
   const [time, modifier] = timeStr.split(" ");
-  let [hours, min] = time.split(":").map(Number);
+  let [hours, minutes] = time.split(":").map(Number);
 
   if (modifier === "PM" && hours !== 12) hours += 12;
   if (modifier === "AM" && hours === 12) hours = 0;
 
-  return hours * 60 + min;
+  return hours * 60 + minutes;
 }
 
 {/* end time diffrence function */}
@@ -155,7 +159,7 @@ function parseAMPM(timeStr: string): number {
 //});
 
  
-	
+
 
 const prayertime=[];
 
@@ -168,7 +172,7 @@ const prayertime=[];
 	
 	
 	prayertime.push({'time':nav1.fajr,'name':'fajr'})
-
+	
 	prayertime.push({'time':nav1.syuruk,'name':'syuruk'})
 	
 	prayertime.push({'time':nav1.dhuha,'name':'dhuha'})
@@ -187,6 +191,7 @@ const prayertime=[];
 	
 	
   });
+
 
   
 
@@ -327,6 +332,15 @@ if(diffrence > 0)
     
 //alert(times11);
 
+
+
+    function time_fiddfrnce(current_time, end_time) 
+    {
+  const startMinutes = parseAMPM(current_time);
+    const endMinutes = parseAMPM(end_time);
+    let delta1 = endMinutes - startMinutes;
+	return delta1;
+}
 
 
 
