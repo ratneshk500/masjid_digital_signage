@@ -157,6 +157,36 @@ function parseAMPM(timeStr: string): number {
  
 	
 
+const prayertime=[];
+
+
+
+ myData.forEach((nav1, index) => {
+    //console.log(nav1.imsak)
+	//console.log(nav1.fajr)
+	prayertime.push({'time':nav1.imsak,'name':'imsak'})
+	
+	
+	prayertime.push({'time':nav1.fajr,'name':'fajr'})
+
+	prayertime.push({'time':nav1.syuruk,'name':'syuruk'})
+	
+	prayertime.push({'time':nav1.dhuha,'name':'dhuha'})
+	
+	
+	prayertime.push({'time':nav1.dhuhr,'name':'dhuhr'})
+	
+	
+	prayertime.push({'time':nav1.asr,'name':'asr'})
+	
+	
+	prayertime.push({'time':nav1.maghrib,'name':'maghrib'})
+	
+	
+	prayertime.push({'time':nav1.isha,'name':'isha'})
+	
+	
+  });
 
   
 
