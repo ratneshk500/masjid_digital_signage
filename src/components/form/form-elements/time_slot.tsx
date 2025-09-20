@@ -195,9 +195,9 @@ function getTimeLeft(targetTime: string) {
   const target = new Date();
   
   // targetTime in "HH:MM:SS" 24-hour format
-  const [hours, minutes1, seconds] = targetTime.split(":").map(Number);
+  const [hours, minutes, seconds] = targetTime.split(":").map(Number);
 
-  target.setHours(hours, minutes1, seconds, 0);
+  target.setHours(hours, minutes, seconds, 0);
 
   // If target already passed today, move it to tomorrow
   if (target < now) {
