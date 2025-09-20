@@ -333,8 +333,8 @@ if(diffrence > 0)
     {
   const startMinutes = parseAMPM(current_time);
     const endMinutes = parseAMPM(end_time);
-    let delta = endMinutes - startMinutes;
-	return delta;
+    let delta1 = endMinutes - startMinutes;
+	return delta1;
 }
 
 function parseAMPM(timeStr: string): number {
